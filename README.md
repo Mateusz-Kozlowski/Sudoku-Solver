@@ -10,9 +10,9 @@ This file includes the following chapters:
 Python 3.8
 
 # 2. Project Description:
-![easy](Screenshots//start.png)
-![start](Screenshots//start.png)
-![start](Screenshots//start.png)
+![easy](Screenshots//easy.png)
+![start](Screenshots//medium.png)
+![start](Screenshots//hard.png)
 
 # 3. How to install:
 If you're familiar with git you can clone the repo. Otherwise you can simply download whole project as a compressed folder.
