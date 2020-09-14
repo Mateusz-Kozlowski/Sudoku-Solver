@@ -10,7 +10,9 @@ This file includes the following chapters:
 Python 3.8
 
 # 2. Project Description:
-Comming soon!
+![easy](Screenshots//easy.png)
+![start](Screenshots//medium.png)
+![start](Screenshots//hard.png)
 
 # 3. How to install:
 If you're familiar with git you can clone the repo. Otherwise you can simply download whole project as a compressed folder.
@@ -26,7 +28,8 @@ Finally run the program using command line. Navigate to the directory, where the
 
 Wait a few second...
 And you should see sth like that:
-(comming soon!)
+
+![start](Screenshots//start.png)
 
 # 4. Tips:
 Comming soon!
