@@ -4,7 +4,6 @@ This file includes the following chapters:
 1. Code Requirements
 2. Project description
 3. How to install
-4. Tips
 
 # 1. Code Requirements:
 Python 3.8
@@ -30,6 +29,3 @@ Wait a few second...
 And you should see sth like that:
 
 ![start](Screenshots//start.png)
-
-# 4. Tips:
-Comming soon!
