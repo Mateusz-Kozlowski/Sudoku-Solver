@@ -28,4 +28,4 @@ Finally run the program using command line. Navigate to the directory, where the
 Wait a few second...
 And you should see sth like that:
 
-![start](Screenshots//start.png)
+![start](Screenshots//start.png) 
