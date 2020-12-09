@@ -73,9 +73,11 @@ def is_correct(board, value, x, y):
 
 
 def main():
-    running = True
-    while running:
-        path = str(input('Enter a file path that contains a sudoku board: '))
+    while True:
+        path = str(input('Enter a file path that contains a sudoku puzzle (or q if u want to exit): '))
+
+        if path == 'q':
+            break
 
         try:
             with open(path) as file:
