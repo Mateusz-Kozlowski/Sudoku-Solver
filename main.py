@@ -21,15 +21,6 @@ def print_board(board):
                     print(str(a) + " ", end="")
 
 
-def find_empty_field(board):
-    for i in range(len(board)):
-        for j in range(len(board[0])):
-            if board[i][j] == 0:
-                return i, j
-
-    return None
-
-
 def solve(board):
     empty = find_empty_field(board)
     if empty is None:
@@ -46,6 +37,15 @@ def solve(board):
             board[y][x] = 0
 
     return False
+
+
+def find_empty_field(board):
+    for i in range(len(board)):
+        for j in range(len(board[0])):
+            if board[i][j] == 0:
+                return i, j
+
+    return None
 
 
 def is_correct(board, value, x, y):
@@ -73,66 +73,29 @@ def is_correct(board, value, x, y):
 
 
 def main():
-    choice = -1
-    while choice != 0:
-        print("Enter difficulty: ")
-        print("1 - easy")
-        print("2 - medium")
-        print("3 - hard")
-        print("0 - exit")
-        choice = int(input("Your choice: "))
+    running = True
+    while running:
+        path = str(input('Enter a file path that contains a sudoku board: '))
 
-        if choice == 1:
-            with open('easySudoku.txt', "r") as easy_sudoku_file:
-                easy_board = [[int(x) for x in line.split()] for line in easy_sudoku_file]
-
-            print("\nBefore solving: ")
-            print_board(easy_board)
-            print("\nResolution is in progress...")
-            if solve(easy_board) is False:
-                print('\n' + "Invalid example, solving the problem is impossible!")
-            else:
-                print('\n' + "Solved sudoku: ")
-                print_board(easy_board)
-            print("")
-
-            easy_sudoku_file.close()
-
-        elif choice == 2:
-            with open('mediumSudoku.txt', "r") as medium_sudoku_file:
-                medium_board = [[int(x) for x in line.split()] for line in medium_sudoku_file]
-
-            print("\nBefore solving: ")
-            print_board(medium_board)
-            print("\nResolution is in progress...")
-            if solve(medium_board) is False:
-                print('\n' + "Invalid example, solving the problem is impossible!")
-            else:
-                print('\n' + "Solved sudoku: ")
-                print_board(medium_board)
-            print("")
-
-            medium_sudoku_file.close()
-
-        elif choice == 3:
-            with open('hardSudoku.txt', "r") as hard_sudoku_file:
-                hard_board = [[int(x) for x in line.split()] for line in hard_sudoku_file]
-
-            print("\nBefore solving: ")
-            print_board(hard_board)
-            print("\nResolution is in progress...")
-            if solve(hard_board) is False:
-                print('\n' + "Invalid example, solving the problem is impossible!")
-            else:
-                print('\n' + "Solved sudoku: ")
-                print_board(hard_board)
-            print("")
-
-        else:
-            print('')
+        try:
+            with open(path) as file:
+                board = [[int(x) for x in line.split()] for line in file]
+                print("\nBefore solving: ")
+                print_board(board)
+                print("\nResolution is in progress...")
+                if solve(board) is False:
+                    print('\n' + "Invalid example, solving the problem is impossible!")
+                else:
+                    print('\n' + "Solved sudoku: ")
+                    print_board(board)
+                print("")
+        except IOError:
+            print("File not accessible")
+            print('Did u forget about an extension?')
+            print('Anyway try again...')
 
 
 if __name__ == '__main__':
     main()
 
-print('Code is done!')
+print('Code is done, so everything works fine!')
